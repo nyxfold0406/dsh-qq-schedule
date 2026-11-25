@@ -1,0 +1,13 @@
+# 可选扩展：给 QQ 桥加 /日程 和 /待办。
+#
+# 先装主包 @nyxfold/dsh-qq-bridge；这个包只负责读「桌面待办小窗」的纯文本，
+# 把 /日程、/待办 两个命令接过去。不装它，主包照常工作，只是这两个命令不认识。
+- insert:
+    - id: qq-schedule
+      name: '@nyxfold/dsh-qq-schedule'
+      config:
+        # 桌面待办小窗的数据目录（todos.txt / classes.txt / events.txt / cfg.txt）。
+        # 空 = 不启用，命令会回一句"读不到数据"。插件只读不写：改数据走小窗或 todo.py。
+        todoAppDir: ''
+        # /日程 默认看几天（从今天算，含今天）。
+        scheduleDays: 7

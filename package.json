@@ -1,0 +1,39 @@
+{
+  "name": "@nyxfold/dsh-qq-schedule",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "给 QQ 桥加 /日程 和 /待办：读桌面待办小窗的纯文本，手机上一句话就能看。",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "src/**/*.js",
+    "cordis.patch.yml",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check src/schedule.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "author": "nyxfold",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "qq",
+    "onebot",
+    "schedule",
+    "todo"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
